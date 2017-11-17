@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NetJets Food Recommendation</title>
+	<link rel="stylesheet" href="css/style.css">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> 
+	addEventListener(	"load", 
+						function() 
+						{ 
+							setTimeout(hideURLbar, 0); 
+						}, 
+						false
+					); 
+	function hideURLbar(){ 
+						window.scrollTo(0,1); 
+			} 
+	</script>
+  </head>
+  <body>
+    <h1>NetJets Food Recommendation</h1>
+    <div id="container" class="main-agileinfo">
+		<div class="sap_tabs">			
+	
+	  <div id="horizontalTab">
+				<ul class="resp-tabs-list" id="Heading">
+					<li class="resp-tab-item" ><span>Book Flight to get Recommendation</span></li>
+					
+				</ul>	
+				<div class="clearfix"> </div>	
+				<div class="resp-tabs-container" id="harsh">
+				<div class="tab-1 resp-tab-content oneway" id="Harsh">
+						<form>
+							<div class="class1">
+								<h3>User Id</h3>
+								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+													
+								</select>
+
+							</div>
+							<div class="to">
+								<h3>From</h3>
+								<input type="text" name="city" class="city2" placeholder="Type Departure City" required="">
+							</div>
+							<div class="clear"></div>
+							<div class="class1">
+								<h3>Meal Timing</h3>
+								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+									<option value="null">Late Night</option>  
+									<option value="null">Dinner</option>   
+									<option value="null">Lunch</option>   
+									   						
+								</select>
+
+							</div>
+							<div class="class1">
+								<h3>Flight Duration</h3>
+								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+									<option value="null">Short</option>  	  						
+								</select>
+
+							</div>
+							<div class="clear"></div>
+							
+						</form>
+						<input type="submit" value="Get Recommendation">
+				</div>
+					
+				<div style="display:none;">
+					<table class="table-fill">
+					<thead>
+					<tr>
+					<th class="text-left">Month</th>
+					<th class="text-left">Sales</th>
+					</tr>
+					</thead>
+					<tbody class="table-hover">
+					<tr>
+					<td class="text-left">January</td>
+					<td class="text-left">$ 50,000.00</td>
+					</tr>
+					<tr>
+					<td class="text-left">February</td>
+					<td class="text-left">$ 10,000.00</td>
+					</tr>
+					<tr>
+					<td class="text-left">March</td>
+					<td class="text-left">$ 85,000.00</td>
+					</tr>
+					<tr>
+					<td class="text-left">April</td>
+					<td class="text-left">$ 56,000.00</td>
+					</tr>
+					<tr>
+					<td class="text-left">May</td>
+					<td class="text-left">$ 98,000.00</td>
+					</tr>
+					</tbody>
+					</table>
+				<div>
+		</div>			
+	</div>
+    </div>
+   
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script type="text/babel" src="example1.js"></script>
+	<!--script for portfolio-->
+		<script src="js/jquery.min.js"> </script>
+		<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#horizontalTab').easyResponsiveTabs({
+					type: 'default', //Types: default, vertical, accordion           
+					width: 'auto', //auto or any width like 600px
+					fit: true   // 100% fit in a container
+				});
+			});		
+		</script>
+		<!--//script for portfolio-->
+		<!-- Calendar -->
+		<link rel="stylesheet" href="css/jquery-ui.css" />		
+		<script src="js/jquery-ui.js"></script>
+						  
+		<!-- //Calendar -->
+		<!--quantity-->
+		<script>
+		$('.value-plus').on('click', function(){
+			var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+			divUpd.text(newVal);
+		});
+
+		$('.value-minus').on('click', function(){
+			var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+			if(newVal>=1) divUpd.text(newVal);
+		});
+		</script>
+		<!--//quantity-->
+		<!--load more-->
+		<script>
+		$(document).ready(function () {
+			size_li = $("#myList li").size();
+			x=1;
+			$('#myList li:lt('+x+')').show();
+			$('#loadMore').click(function () {
+				x= (x+1 <= size_li) ? x+1 : size_li;
+				$('#myList li:lt('+x+')').show();
+			});
+			$('#showLess').click(function () {
+				x=(x-1<0) ? 1 : x-1;
+				$('#myList li').not(':lt('+x+')').hide();
+			});
+		});
+		</script>
+		<!-- //load-more -->
+  </body>
+</html>
